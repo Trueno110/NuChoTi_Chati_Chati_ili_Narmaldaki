@@ -22,15 +22,6 @@ namespace NuChoTi_Chati_Chati_ili_Narmaldaki
         public UserSet()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
 
         }
 
@@ -38,5 +29,53 @@ namespace NuChoTi_Chati_Chati_ili_Narmaldaki
         {
 
         }
+        
+        
+        private SolidColorBrush originalBackground; 
+        private bool isColorChanged = false; 
+        
+        private void Tema_click(object sender, RoutedEventArgs e)
+        {
+
+            if (!isColorChanged)
+            {
+               
+                originalBackground = (SolidColorBrush)Perepiska.Background; 
+                                                                                 
+                SolidColorBrush newBackground = new SolidColorBrush(Colors.Black); 
+                Perepiska.Background = newBackground; 
+                isColorChanged = true; 
+            }
+            else
+            {
+              
+                Perepiska.Background = originalBackground; 
+                isColorChanged = false; 
+            }
+        }
+
+        private void Nastroyki_Click(object sender, RoutedEventArgs e)
+        {
+            Account account = new Account();
+            account.Show();
+            this.Close();
+        }
+
+        private void Obnovit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SendMessage_Click(object sender, RoutedEventArgs e)
+        {
+            string message = messageTextBox.Text;
+            if (!string.IsNullOrEmpty(message))
+            {
+                messageListBox.Items.Add(message);
+                messageTextBox.Text = string.Empty;
+            }
+        }
+
+       
     }
 }

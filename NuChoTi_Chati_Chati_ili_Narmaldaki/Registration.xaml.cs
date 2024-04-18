@@ -26,8 +26,7 @@ namespace NuChoTi_Chati_Chati_ili_Narmaldaki
 
         private void Zaregaca_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow main = new MainWindow();
-            main.Show();
+         
             this.Close();
         }
     }

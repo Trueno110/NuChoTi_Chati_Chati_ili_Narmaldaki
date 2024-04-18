@@ -26,14 +26,16 @@ namespace NuChoTi_Chati_Chati_ili_Narmaldaki
 
         private void BXOD_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow main = new MainWindow();
-            main.Show();
+            UserSet userSet = new UserSet();
+            userSet.Show();
             this.Close();
         }
 
         private void Zaregaca_Click(object sender, RoutedEventArgs e)
         {
-
+            Registration registration = new Registration();
+            registration.ShowDialog();
+           
         }
     }
 }

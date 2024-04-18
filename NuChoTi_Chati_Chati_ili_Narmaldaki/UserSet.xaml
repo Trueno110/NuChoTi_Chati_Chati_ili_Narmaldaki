@@ -6,19 +6,31 @@
         xmlns:local="clr-namespace:NuChoTi_Chati_Chati_ili_Narmaldaki"
         mc:Ignorable="d"
         Title="UserSet" Height="450" Width="800">
-    <Grid>
+    <Grid Name="Perepiska" Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition  Width="2*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Column="2" Content="Обновить переписку" Width="200" Height="40" VerticalAlignment="Top" HorizontalAlignment="Center" Click="Button_Click"/>
-        <Button Grid.Column="2" Content="Обновить переписку" Width="130" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Button_Click_1"/>
+        <Button Grid.Column="2" Content="Обновить переписку" BorderBrush="Aquamarine" Background="Black" Foreground="Aquamarine" Width="200" Height="40" VerticalAlignment="Top" HorizontalAlignment="Center" Click="Obnovit_Click"/>
+        <Button Grid.Column="2" Content="Перейти в настройки" BorderBrush="Aquamarine" Background="Black" Foreground="Aquamarine"  Width="130" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Nastroyki_Click"/>
         <StackPanel Grid.Column="0" >
-            <TextBlock Text="Введите Никнейм для поиска" Width="180" VerticalAlignment="Top" HorizontalAlignment="Center" />
-            <TextBox Text="" Width="180"  />
-            <Button Content="" Name="" Click="users_Click" Background="Red" Width="190" Height="30" BorderBrush="Black" BorderThickness="2" Margin="5,10,5,5"/>
+            <TextBlock Text="Введите Никнейм для поиска" Width="180" VerticalAlignment="Top" Foreground="Red" HorizontalAlignment="Center" />
+            <TextBox Text="" Width="180" Foreground="red" Background="Black" BorderBrush="Red"  />
+            <Button Content="Поиск" Width="190" Height="30" Background="White" BorderBrush="red" Foreground="red" Margin="5,5,5,5" />
+            <Button Content="" Name="Chuvaac1" Click="users_Click" Background="Red" Width="190" Height="30" BorderBrush="Black" BorderThickness="2" Margin="5,10,5,5"/>
+            <Button Content="" x:Name="Chuvaac2" Click="users_Click" Background="Red" Width="190" Height="30" BorderBrush="Black" BorderThickness="2"  Margin="5,5,5,5"/>
+            <Button Content="" x:Name="Chuvaac3" Click="users_Click" Background="Red" Width="190" Height="30" BorderBrush="Black" BorderThickness="2" Margin="5,5,5,5"/>
+            <Button Content="" x:Name="Chuvaac4" Click="users_Click" Background="Red" Width="190" Height="30" BorderBrush="Black" BorderThickness="2" Margin="5,5,5,5"/>
+            <Button Content="" x:Name="Chuvaac5" Click="users_Click" Background="Red" Width="190" Height="30" BorderBrush="Black" BorderThickness="2" Margin="5,5,5,5"/>
+            <Button Content="" x:Name="Chuvaac6" Click="users_Click" Background="Red" Width="190" Height="30" BorderBrush="Black" BorderThickness="2" Margin="5,5,5,5"/>
         </StackPanel>
-
+        <Button Grid.Column="2" Content="*" Width="50" Height="40" VerticalAlignment="Bottom" Background="Black" Foreground="Aquamarine" FontSize="30" BorderBrush="Aquamarine" HorizontalAlignment="Left" Click="Tema_click"/>
+        <Grid Grid.Column="1"  >
+            <ListBox Name="messageListBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Foreground="Blue" />
+            <TextBox Name="messageTextBox" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="10" Foreground="Blue"/>
+            <Button Content="Send" Click="SendMessage_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Background="White" Foreground="Blue" />
+        </Grid>
+        <ListBox Grid.Column="2" HorizontalAlignment="Left" Height="320" Margin="0,53,0,0" VerticalAlignment="Top" Width="190" d:ItemsSource="{d:SampleData ItemCount=5}" />
     </Grid>
 </Window>

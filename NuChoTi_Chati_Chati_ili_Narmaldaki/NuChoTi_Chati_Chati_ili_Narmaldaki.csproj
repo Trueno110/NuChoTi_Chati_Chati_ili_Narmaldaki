@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Account.xaml.cs">
+      <DependentUpon>Account.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Enterence.xaml.cs">
       <DependentUpon>Enterence.xaml</DependentUpon>
     </Compile>
@@ -64,6 +67,10 @@
     <Compile Include="UserSet.xaml.cs">
       <DependentUpon>UserSet.xaml</DependentUpon>
     </Compile>
+    <Page Include="Account.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Enterence.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -114,6 +121,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png-transparent-email-computer-icons-email-miscellaneous-cdr-angle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="solution-knr8f-rs-wX-450.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="5d62b1eb8b81e02fbd88b383374e60fe.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="KkAAAgK1oeA-1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1685011350_mykaleidoscope-ru-p-sigma-pricheska-4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
